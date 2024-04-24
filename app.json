@@ -1,0 +1,16 @@
+{
+  "name": "Playzone",
+  "short_name": "Playzone",
+  "description": "/",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "black",
+  "icons": [
+    {
+      "src": "https://i.imgur.com/7WpxKwH.jpeg",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}

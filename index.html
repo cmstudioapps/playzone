@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Playzone um app de entretenimento e interação social.">
+  <title>playzone</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" type="image/x-icon" href="https://i.imgur.com/7WpxKwH.jpeg">
+  <link rel="manifest" href="app.json">
+  
+</head>
+<body>
+  
+  <dialog id="login">
+    
+  <h3>Nome de Usuário</h3>
+  <br>
+  
+  <input id="nome" type="text" placeholder="nome aqui">
+    <br>
+    
+    <h3>Idade:</h3>
+    
+    <input id="idade" onkeyup="rend()" type="range" placeholder="Sua idade" min="10" max="30">
+    
+    <p id="renderizar"></p>
+    
+    <h3>Sua data de Nascimento: <a href="">Saiba por quê.</a></h3>
+    <input id="nascimento" type="date" placeholder="Data de nascimento">
+    
+    
+    <h3>E-mail 📧</h3>
+    
+    <br>
+    
+    <input id="email" type="email" placeholder="Seu E-mail">
+    <br>
+    <br>
+    <button type="submit" onclick="loginn()">Confirmar</button>
+    
+    <br>
+  <h3>Confirme seu E-mail:</h3>
+  <p id="msgConfirm"></p>
+  <br>
+   <p id="msgCodigo"></p>
+    <input id="codigo" type="number" placeholder="Código de confirmação" onkeyup="confirmar()">
+    
+  </dialog>
+  
+  
+  <header>
+    
+    <nav id="">
+      
+    </nav>
+    
+    <nav id="botoes">
+      
+      <button onclick="videos()">Videos</button>
+      
+      <button onclick="jogos()">Jogos e apps</button>
+      
+      <button onclick="manga()">Mangás</button>
+      
+      <button onclick="Filmes()">Filmes e séries</button>
+      
+      <button onclick="chat()">CHAT</button>
+      
+      
+      
+      <button onclick="config()">Configurações</button>
+      
+    </nav>
+    <img src="bela-cena-de-desenho-animado-de-casal-de-anime.jpg" alt="">
+  </header>
+  
+  
+ <section>
+   
+   <span>Entrar para o grupo de criadores: <button onclick="Entrar()">Entrar</button></span>
+   
+   
+   <!--Videos-->
+   
+   <div id="videos">
+     
+     <nav>
+       
+       <iframe src="https://www.youtube.com/embed/sY2TOakDaB4" frameborder="0">#</iframe>
+       
+      <p>Jogando Super market simulador</p>
+  
+       
+     </nav>
+     
+     <nav>
+       
+       <iframe src="https://youtube.com/embed/0ncKqkGEKi0?si=s5ACkoB2E91_lGJW" frameborder="0" autoplay></iframe>
+       
+       <p>Proibido GAROTAS aqui.</p>
+       
+     </nav>
+     
+     
+     
+   </div>
+   
+   
+ </section>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="main.js">main.js</script>
+ <script src="login.js">login.js</script>
+ <script src="notificar.js">notificar.js</script>
+ <script src="style">style</script>
+ 
+ 
+ <script>
+document.addEventListener("DOMContentLoaded", function() {
+  var videosDiv = document.getElementById("videos");
+  var navs = videosDiv.getElementsByTagName("nav");
+  var firstNav = navs[0];
+  var secondNav = navs[1];
+  // Remover os navs existentes
+  videosDiv.removeChild(firstNav);
+  videosDiv.removeChild(secondNav);
+  // Adicionar os navs na ordem inversa
+  videosDiv.appendChild(secondNav);
+  videosDiv.appendChild(firstNav);
+});
+</script>
+</body>
+<footer>
+  &copy; Caio multiversando | CM STUDIO
+</footer>
+</html>
