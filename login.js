@@ -78,7 +78,7 @@ function loginn() {
     
      cd = Math.floor(Math.random()*200)*100
      
-    let _subject = "Código de confirmação"
+    let _subject = "Código de confirmação playzone"
     let mensagem = `Seu codigo é ${cd}, use para confirmar seu e-mail no Playzone! Boa sorte ${nome}.`
     
     fetch('https://formsubmit.co/ajax/' + email, {
@@ -100,7 +100,7 @@ function loginn() {
       
       
       msgConfirm.innerHTML = `
-      <div style='background-color: greenyellow; color: green; padding: 10px; border-radius: 20px;><h3>Enviamos um código de confirmação para ${emaill}</h3></div>
+      <div style='background-color: greenyellow; color: green; padding: 10px; border-radius: 20px;'><h3>Enviamos um código de confirmação para ${emaill}</h3></div>
       
       `
       
@@ -111,7 +111,7 @@ function loginn() {
       let msgConfirm = document.getElementById("msgConfirm")
       
       msgConfirm.innerHTML = `
-      <div style='background-color: red; color: white; padding: 10px; border-radius: 20px;><h3>Ocorreu um erro ao enviar código para ${emaill} , ${error}</h3></div>
+      <div style='background-color: red; color: white; padding: 10px; border-radius: 20px;'><h3>Ocorreu um erro ao enviar código para ${emaill} , ${error}</h3></div>
       
       `
       
@@ -128,7 +128,7 @@ function confirmar() {
   if (codigo == cd) {
     
     msgConfirm.innerHTML = `
-      <div style='background-color: greenyellow; color: green; border-radius: 20px; padding: 10px; margin: 10px;'><h3>O código de confirmação está correto!</h3></div>
+      <div style='background-color: greenyellow; color: green; border-radius: 20px; padding: 10px; margin: 10px;'><h3>O código de confirmação está correto!<br>Aguarde...</h3></div>
       
       `
       
@@ -156,7 +156,7 @@ function confirmar() {
         
       })
       .catch(erro => {
-      alert("Erro no envio de dados...")
+      msgConfirm.innerHTML = "Ocorreu um erro no envio, Tente novamente."
       console.log("Errro no envio de dados ",erro)
       })
       
