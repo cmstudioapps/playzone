@@ -116,7 +116,18 @@
   
   
   
-  
+  <script>
+
+// Verifica se o navegador suporta a instalação de aplicativos da web progressivos
+if ('InstallTrigger' in window) {
+    // Chama a solicitação de instalação do aplicativo assim que a página carregar
+    window.addEventListener('load', () => {
+        // Mostra a solicitação de instalação do aplicativo
+        window.InstallTrigger.installPrompt();
+    });
+}
+
+</script>
   
   <script src="main.js">main.js</script>
  <script src="login.js">login.js</script>
